@@ -1,5 +1,5 @@
 html {
-  background: rgb(255, 255, 255);
+  background: rgb(131, 128, 128);
   height: 100%;
   display: flex;
 }
@@ -11,4 +11,57 @@ body {
 .App {
   font-family: sans-serif;
   text-align: center;
+}
+form .todo-list {
+  background-color: black;
+  padding-top: 10px;
+}
+/*contenedor de input*/
+.file-input {
+  background-color: rgb(255, 255, 255);
+  padding: 10px 0;
+  height: 50px;
+}
+/*boton rojo*/
+button {
+  background-color: rgb(167, 97, 97);
+  border: none;
+  width: auto;
+  height: 43px;
+}
+.text {
+  background-color: rgb(238, 238, 238);
+  height: 40px;
+  border: 0px solid rgb(226, 220, 220);
+}
+
+/*contenedor de listas de tarea*/
+.todo-new-item {
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 1px solid rgb(211, 205, 205);
+  margin: 3px 10px;
+  padding: 10px 0;
+}
+.todo__state {
+  background-color: rgb(12, 37, 37);
+}
+
+/*contenedor de caja*/
+.todo-list {
+  margin: 20px auto;
+  padding: 20px 0;
+  background-color: rgb(255, 255, 255);
+  width: 300px;
+  height: auto;
+  box-sizing: border-box;
+
+  /*ultimo botom blue*/
+  .button-blue {
+    background-color: aqua;
+    border: none;
+    padding: 8px 8px;
+    border-radius: 10px;
+    color: aliceblue;
+  }
 }
