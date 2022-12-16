@@ -5,6 +5,7 @@ const FormTodo = (props) => {
   //creamos una costante llamada healeadditem que se va a utilizar en cualquier componente que la necesitemos,
   // con el props me recibe unos caracteres
   const { handleAddItem } = props; //(C-1)
+  //el setDEscription nos servira para modificar la descripcion 
   const [description, setDescription] = useState(""); // (F-1)
   const handleSubmit = (e) => {
     e.preventDefault(); // (E)
