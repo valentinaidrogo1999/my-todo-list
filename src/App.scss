@@ -1,5 +1,3 @@
-
-
 html {
   background: #ddd;
   height: 100%;
@@ -17,7 +15,7 @@ body {
 }
 
 .todo-list {
-  background: #fff;
+  background: rgb(255, 255, 255);
   font-size: 15px;
   max-width: 300px;
   margin: auto;
@@ -25,14 +23,21 @@ body {
   padding: 8px 16px;
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
 }
-
+.button-blue {
+  background-color: #2884ba;
+  border: none;
+  padding: 10px 10px;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 10px;
+}
 
 /** BUTTONS*/
 $colorPink: #e95678;
-$colorPinkHover:#c23455;
+$colorPinkHover: #c23455;
 
 $colorBlue: #25b0bc;
-$colorBlueHover:#166b72;
+$colorBlueHover: #1c4f6f;
 
 @mixin button($class, $color, $colorHover) {
   .button.#{$class} {
@@ -54,17 +59,15 @@ $colorBlueHover:#166b72;
   font-size: 15px;
   border: 0px solid;
   border-radius: 5px;
-  color: white;
+  color: rgb(222, 222, 222);
 }
 
 .button[disabled] {
   opacity: 0.3;
 }
 
-@include button('pink', $colorPink, $colorPinkHover);
-@include button('blue', $colorBlue, $colorBlueHover);
-
-
+@include button("pink", $colorPink, $colorPinkHover);
+@include button("blue", $colorBlue, $colorBlueHover);
 
 /** TODO*/
 .file-input {
@@ -72,7 +75,7 @@ $colorBlueHover:#166b72;
   background: #f8f8f8;
 }
 
-.file-input>.text {
+.file-input > .text {
   outline: none;
   padding: 0px 10px;
   font-size: 15px;
@@ -81,7 +84,6 @@ $colorBlueHover:#166b72;
   background: transparent;
   border: 0px solid;
 }
-
 
 /** CHECKBOX*/
 /* Original styles by Shaw : https://codepen.io/shshaw/pen/WXMdwE */
@@ -106,7 +108,7 @@ $colorTextChecked: #a5e7ec;
 .todo.new-item {
   opacity: 0;
   transform: translateX(100px);
-  animation: fadeIn .3s linear forwards;
+  animation: fadeIn 0.3s linear forwards;
 }
 
 .todo__state {
@@ -138,13 +140,11 @@ $colorTextChecked: #a5e7ec;
   stroke-linecap: round;
 }
 
-
 .todo__line,
 .todo__box,
 .todo__check {
-  transition: stroke-dashoffset $duration cubic-bezier(.9, .0, .5, 1);
+  transition: stroke-dashoffset $duration cubic-bezier(0.9, 0, 0.5, 1);
 }
-
 
 .todo__circle {
   stroke: $stroke;
@@ -156,7 +156,6 @@ $colorTextChecked: #a5e7ec;
   animation: none $duration linear; //cubic-bezier(.08,.56,.04,.98);
 
   @keyframes explode {
-
     //0% { stroke-width: 0; transform: scale(0.5) rotate(0deg); }
     30% {
       stroke-width: 3;
@@ -198,27 +197,27 @@ $colorTextChecked: #a5e7ec;
 }
 
 .todo__state:checked {
-  ~.todo__text {
+  ~ .todo__text {
     transition-delay: 0s;
     color: $colorTextChecked;
     opacity: 0.6;
   }
 
-  ~.todo__icon .todo__box {
+  ~ .todo__icon .todo__box {
     stroke-dashoffset: 56.1053;
     transition-delay: 0s;
   }
 
-  ~.todo__icon .todo__line {
+  ~ .todo__icon .todo__line {
     stroke-dashoffset: -8;
   }
 
-  ~.todo__icon .todo__check {
+  ~ .todo__icon .todo__check {
     stroke-dashoffset: 0;
     transition-delay: $duration * 0.6;
   }
 
-  ~.todo__icon .todo__circle {
+  ~ .todo__icon .todo__circle {
     animation-name: explode;
   }
 }
