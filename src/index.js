@@ -5,9 +5,11 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 //ruta para mostrar en HTML
+//todo lo que este dentro de Root me lo va a renderizar en el index HTML
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
+  //aqui se añaden todos los componentes para que me los renderice en el index
   <React.StrictMode>
     <App />
   </React.StrictMode>

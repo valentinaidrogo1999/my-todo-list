@@ -1,12 +1,15 @@
 import React, { Fragment } from "react";
 
+//vamos a recibir dentro de la constante checkbox unas propiedades "props"
 const Checkbox = (props) => {
+    /*aqui se crean las propíedades de props que recibe la "data" y esta contiene las propiedades 
+    de  handleAddItem( id , description, done) que se encuentran en el componente Formtodo */
     const {
         onChange,
         data: { id, description, done },
     } = props;
-    //la propiedad fragment la utilizamos por si no queremos que nos aparezca elementos en el HTML
-    //que no vayamos a utilizar , el fragment es como decir una etiqueta vacia padre.
+    /*la propiedad fragment la utilizamos por si no queremos que nos aparezca elementos en el HTML
+    que no vayamos a utilizar , el fragment es como decir una etiqueta vacia padre, por decir un Div*/
     return (
         <Fragment>
             {/* Just ADD !!!! */}
@@ -24,7 +27,7 @@ const Checkbox = (props) => {
                     <circle id="todo__circle" cx="13.5" cy="12.5" r="10" />
                 </defs>
             </svg>
-
+              
             <label className="todo new-item">
                 <input
                     className="todo__state"
